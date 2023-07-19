@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style_form.css" />
+    <script src="myScript.js"></script>
+  </head>
+
+  <body>
+    <form action="insert.php" method="post">
+          <h1 id="head1">Sign Up!</h1>   
+        
+
+        <div class="form-control">
+          <label for="name" id="label-name"> Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+            name="name"
+          />
+        </div>
+          <br />
+        <div class="form-control">
+            <label for="email" id="label-email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Your email"
+                required
+                name="email"
+            />
+        </div>
+
+            <br />
+        <div class="form-control">
+            <label for="age" id="label-age">Age</label>
+            <input
+                type="number"
+                id="age"
+                placeholder="Enter Your Age"
+                required
+                name="age"
+            />
+        </div>
+          <br />
+        <div class="form-control">
+          <label for="comment" id="label-comment"
+            >Any Comments or Suggestions</label
+          >
+          <br />
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Enter your comment"
+            required
+          ></textarea>
+          <br />
+          <br />
+        </div>
+        <div id="buttons">
+          <button type="reset" value="reset" id="reset">Reset</button>
+
+          <button type="submit" id="submit">Submit</button>
+        </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
