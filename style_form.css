@@ -75,7 +75,7 @@ label {
   bottom: 30px;
   color: #932f2f;
   font-size: 45pt;
-  font-weight: ;
+
   text-shadow: -5px 3px 6px rgb(143, 145, 150);
 }
 
@@ -108,6 +108,7 @@ textarea:hover {
 }
 
 button {
+  cursor: pointer;
   padding: 10px 35px 10px 35px;
   color: #f0b819;
   background-color: #932f2f;
