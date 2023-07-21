@@ -4,11 +4,11 @@
   <head>
     <title>Survey Form</title>
     <link rel="stylesheet" href="style_form.css" />
-    <script src="myScript.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body>
-    <form action="insert.php" method="post">
+    <form onsubmit="sendEmail(); reset(); return false">
           <h1 id="head1">Sign Up!</h1>   
         
 
@@ -19,6 +19,7 @@
             id="name"
             placeholder="Enter Your Name"
             required
+            autocomplete="name"
             name="name"
           />
         </div>
@@ -31,6 +32,7 @@
                 placeholder="Enter Your email"
                 required
                 name="email"
+                autocomplete="email"
             />
         </div>
 
@@ -43,6 +45,7 @@
                 placeholder="Enter Your Age"
                 required
                 name="age"
+                autocomplete="age"
             />
         </div>
           <br />
@@ -69,4 +72,20 @@
       </div>
     </form>
   </body>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "George.themang103@gmail.com",
+        Password: "Georgeg123!",
+        To: "George.themang103@gmail.com",
+        From: document.getElementById("email").value,
+        Subject: "Yeh lo",
+        Body: document.getElementById("name"),
+      }).then((message) => alert(message));
+    }
+  </script>
 </html>
