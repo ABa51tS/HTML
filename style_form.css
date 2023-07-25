@@ -4,7 +4,10 @@ html {
 }
 
 body {
+  position: relative;
+  bottom: 100px;
   margin: 0px;
+  height: 100%;
   background-color: #932f2f;
   display: flex;
   justify-content: center;
@@ -48,17 +51,19 @@ input {
   font-weight: bold;
 }
 
-input:hover {
-  border-bottom: solid 3px #932f2f;
-}
-
 input:focus {
-  border-bottom: solid 3px #932f2f;
   outline: none;
+  transition: border;
+  transition-duration: 0.2s;
+  border-bottom: solid 3px #932f2f;
+  transform-origin: left;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 input::placeholder {
   color: #932f2f;
+  opacity: 0.7;
 }
 
 label {
@@ -88,14 +93,17 @@ textarea,
 textarea::placeholder {
   width: 300px;
   height: 80px;
-
+  border-radius: 10px;
+  opacity: 0.7;
   background-color: transparent;
   color: #932f2f;
   font-size: 12pt;
   font-style: italic;
+  align-items: center;
   font-weight: bold;
   overflow: hidden;
   outline: none;
+  transition: box-shadow 1s ease;
 }
 
 textarea:focus,
@@ -104,7 +112,7 @@ textarea:active {
 }
 
 textarea:hover {
-  box-shadow: 1px 2px black;
+  box-shadow: 2px 4px black;
 }
 
 button {
@@ -113,6 +121,7 @@ button {
   color: #f0b819;
   background-color: #932f2f;
   border-radius: 15px;
+  transition: font-size 1s ease;
 }
 
 button:hover {
@@ -121,6 +130,8 @@ button:hover {
   transition: padding;
   transition-duration: 1s;
   padding: 10px 50px 10px 50px;
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 #buttons {
